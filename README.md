@@ -1,3 +1,3 @@
 
-Learn [Paddle](https://github.com/PaddlePaddle/Paddle) from scrach.
-
+Learn [Paddle](https://github.com/PaddlePaddle/Paddle) from scrach.   
+You may get more debug info with GLOG_v=5 ...   

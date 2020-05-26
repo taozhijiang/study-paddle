@@ -14,17 +14,19 @@ option(BUILD_DEBUG "build project for debug or development propurse..." ON)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR}/lib)
 
+set(PADDLE_PREFIX
+    "/Users/taozj/Dropbox/repos/machine_learning/PADDLE/paddle-r1.7.z" )
 set(INCLUDE_DIR
-    ${PROJECT_SOURCE_DIR}/../../inference_root/paddle/include
-    ${PROJECT_SOURCE_DIR}/../../inference_root/third_party/
-    ${PROJECT_SOURCE_DIR}/../../inference_root/third_party/install/glog/include/
-    ${PROJECT_SOURCE_DIR}/../../inference_root/third_party/install/gflags/include/
+    ${PADDLE_PREFIX}/inference_root/paddle/include
+    ${PADDLE_PREFIX}/inference_root/third_party/
+    ${PADDLE_PREFIX}/inference_root/third_party/install/glog/include/
+    ${PADDLE_PREFIX}/inference_root/third_party/install/gflags/include/
 )
 include_directories( ${INCLUDE_DIR} )
 
 link_directories(
-    ${PROJECT_SOURCE_DIR}/../../inference_root/paddle/lib
-    ${PROJECT_SOURCE_DIR}/../../inference_root/third_party/install/glog/lib/
+    ${PADDLE_PREFIX}/inference_root/paddle/lib
+    ${PADDLE_PREFIX}/inference_root/third_party/install/glog/lib/
 )
 
 set (EXTRA_LIBS ${EXTRA_LIBS} paddle_fluid)
